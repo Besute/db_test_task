@@ -41,5 +41,5 @@ def find_vuls_info(database, args):
 
                 is_good = expression(good_by_dots, version_by_dots, vuln)
                 if not is_good:
-                    info.append(vulnerability[:-2])
+                    info.append(vulnerability[:])
     return info

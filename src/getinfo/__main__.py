@@ -38,6 +38,8 @@ def main():
                 print("KLA_id:", i[3])
                 print("Description:", i[4])
                 print("Publish date:", i[5])
+                print("Start vuln version", i[6])
+                print("Fixed version", i[7])
                 acc += 1
             print("--------------------------")
 

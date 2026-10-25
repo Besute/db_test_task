@@ -1,7 +1,8 @@
 [project]
-name = "kaspersky-test"
+name = "getinfo"
 version = "0.1.0"
 description = ""
+packages = [{ include = "getinfo", from = "src" }]
 authors = [
     {name = "Butko Boris",email = "boris200723@gmail.com"}
 ]
@@ -10,6 +11,12 @@ dependencies = [
     "psycopg[binary] (>=3.3.6,<4.0.0)"
 ]
 
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^2.20.0"
+black = "^22.10.0"
+ruff="^0.1.9"
+pytest = "^9.1.1"
+pytest-asyncio = "^1.4.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]

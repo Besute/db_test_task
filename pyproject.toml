@@ -1,0 +1,16 @@
+[project]
+name = "kaspersky-test"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Butko Boris",email = "boris200723@gmail.com"}
+]
+requires-python = "^3.14"
+dependencies = [
+    "psycopg[binary] (>=3.3.6,<4.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

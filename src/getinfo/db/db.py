@@ -10,7 +10,7 @@ class DB:
         self.__host = host
         self.__port = port
 
-    async def connect(self):
+    def connect(self):
         return psycopg.connect(
             dbname=self.__dbname,
             user=self.__user,

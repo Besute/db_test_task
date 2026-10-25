@@ -1,6 +1,4 @@
 import psycopg
-import asyncio
-
 
 class DB:
     def __init__(self, dbname, user, password, host, port):

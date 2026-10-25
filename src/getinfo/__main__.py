@@ -21,7 +21,9 @@ def main():
 
     if args.version is None:
         res = find_no_vuls(database, args)
-        print(*res)
+        print("Версии без уязвимостей:")
+        for r in res:
+            print(r)
     else:
         info = find_vuls_info(database, args)
         if len(info) == 0:

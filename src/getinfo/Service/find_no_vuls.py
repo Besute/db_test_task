@@ -53,5 +53,5 @@ def find_no_vuls(database, args):
 
                 if bool_ok:
                     good_versions.append(version[0])
-                    break
+
     return good_versions

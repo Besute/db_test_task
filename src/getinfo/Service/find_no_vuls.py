@@ -1,4 +1,5 @@
 from ..auxiliary.auxiliary_functions import make_list_equal
+from ..Errors.errors import NoProductFoundError
 
 def expression(good, checking, vuln):
     """
@@ -33,6 +34,8 @@ def find_no_vuls(database, args):
             res_of_vuln = cur.fetchall()
             cur.execute(f"SELECT version FROM versions WHERE product = '{args.product}';")
             res_of_vers = cur.fetchall()
+            if len(res_of_vuln) == 0:
+                raise NoProductFoundError("Такого продукта нет!")
             for version in res_of_vers:
                 version_by_dots = list(map(int, version[0].split(".")))
                 bool_ok = True
